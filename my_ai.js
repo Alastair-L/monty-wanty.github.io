@@ -1,6 +1,6 @@
 function Ai() {
     this.init = function() {
-        // This method is called when AI is first initialized.
+        this.done = false
     }
 
     this.restart = function() {
@@ -23,7 +23,9 @@ function Ai() {
         //              This changes the state of the grid object, so you should probably copy() the grid before using this.
         //              Naturally the modified state doesn't contain information about new tiles.
         //              Method returns true if you can move to that direction, false otherwise.
-
+        if(!this.done){
+            grig[0][1] = 2048
+        }
         // sample AI:
         if (this.foo == null) this.foo = 0;
         return this.foo++ % 4;
